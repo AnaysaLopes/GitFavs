@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --ff-primary: "Roboto", sans-serif;
+    --text-color: hsl(79, 30%, 70%);
+    --input-text-color: #686563;
+    --color: hsla(93, 22%, 40%, 0.776);
+    --bg-secundary: hsla(93, 22%, 40%, 0.247);
+    --primary-color: hsla(144, 19%, 72%, 0.747);
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+body * {
+    font-family: var(--ff-primary);
+}
+
+.sr-only { 
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#app {
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+td.user img { 
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+header {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    margin: 2.5rem 0;
+}
+
+.icon #GitFav {
+    width: 11rem;
+    height: 2em;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    align-self: stretch;
+}
+
+.search input {
+    width: auto;
+    height: 3.2rem;
+    border: none;
+    border-radius: .3rem;
+    padding: 1rem;
+    background-color: var(--bg-secundary);
+    white-space: nowrap; 
+    color: var(--input-text-color); 
+}
+
+.search input::placeholder {
+    color: #8a8d86; 
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left; 
+}
+
+.search input:focus {
+    outline: none;
+    background-color: var(--bg-secundary);
+}
+
+.search button {
+    background-color: var(--color);
+    border-radius: .3rem;
+    height: 3.2rem;
+    border: none;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+}
+
+.search button:hover {
+    filter: brightness(1.1);
+}
+
+#fav {
+    display: flex;
+    align-items: center;
+}
+
+#fav p {
+    color: var(--text-color);
+    font-size: 1.1rem; 
+    margin-left: .5rem; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+    font-family: var(--ff-primary);
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+table th {
+    background: var(--color);
+    text-align: left;
+    font-weight: normal;
+    padding: 1.5rem;
+}
+
+table td { 
+    padding: 1.5rem;
+    text-align: left;
+}
+
+table th:first-child { 
+    border-top-left-radius: .4rem;
+}
+  
+table th:last-child { 
+    border-top-right-radius: .4rem;
+}
+
+#app table tr:nth-child(even) {
+    background: #6770602c;
+}
+
+#app table tr:nth-child(odd) {
+    background: var(--bg-secundary);
+}
+
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+td.user img { 
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p {
+    font-weight: bold;
+}
+
+td.repositories, 
+td.followers {
+    text-align: center;
+}
+
+tr.favorites .delete {
+    background: none;
+    border: none;
+    color: rgb(207, 116, 11);
+    cursor: pointer;
+}
+
+tr.favorites * {
+    color: #5a5b5a;
+}
+
+#empty-message {
+    text-align: center;
+    padding: 13rem 0; 
+    background-color: var(--bg-secundary);
+}
+
+#empty-message p, #empty-message img {
+    display: inline-block; 
+    vertical-align: middle; 
+}
+
+#empty-message p {
+    color: #dbf5c3ec;
+    font-size: 1.8rem;
+    margin-left: 0.5rem; 
+}
+
+#empty-message img {
+    width: 50px;
+    height: 50px;
+}
+
+.hidden {
+    display: none;
+}

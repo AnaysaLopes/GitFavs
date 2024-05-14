@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitFav</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="js/main.js" type="module" defer></script>
+
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="icon">
+                <img id="GitFav" src="./assets/Gitfav.svg" alt="icon">
+            </div>
+            <div class="search">
+                <label class="sr-only" for="input-search">Usuário do Github...</label>
+                <input id="input-search" type="text" placeholder="Digite o Github favorito">
+
+                <button id="fav">
+                    <img src="./assets/star.svg" alt="desenho de estrela">
+                    <p>FAVORITAR</p>
+                </button>
+            </div>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>USUÁRIO</th>
+                    <th>REPOSITÓRIO</th>
+                    <th>FOLLOWERS</th>
+                    <th>AÇÃO</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+</html>
